@@ -9,4 +9,6 @@
 /money-scripts/cash_statement
 /money-scripts/balance_sheet
 /money-frontend/pics
-money-frontend/node_modules
+/money-frontend/node_modules
+/money-server-mybatis-generator/target
+/money-server-mybatis-generator/src/main/resources/mapper
