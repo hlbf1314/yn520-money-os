@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yn520.money.mapper.cash.CashReportMapper">
+    <select id="oneSeason" resultMap="reportResultMap" parameterType="java.lang.String">
+        select * from ${tableName} where report_date=#{rDate}
+    </select>
+
+    <select id="seasons" resultMap="reportResultMap" parameterType="java.lang.String">
+        select * from ${tableName} order by report_date desc LIMIT 0,#{count};
+    </select>
+
+    <select id="seasonAll" resultMap="reportResultMap" parameterType="java.lang.String">
+        select * from ${tableName} order by report_date desc
+    </select>
+
+
+    <resultMap id="reportResultMap" type="com.yn520.money.pojo.Cash000001">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="report_date" property="reportDate" jdbcType="VARCHAR" />
+        <result column="cash_1" property="cash1" jdbcType="REAL" />
+        <result column="cash_2" property="cash2" jdbcType="REAL" />
+        <result column="cash_3" property="cash3" jdbcType="REAL" />
+        <result column="cash_4" property="cash4" jdbcType="REAL" />
+        <result column="cash_5" property="cash5" jdbcType="REAL" />
+        <result column="cash_6" property="cash6" jdbcType="REAL" />
+        <result column="cash_7" property="cash7" jdbcType="REAL" />
+        <result column="cash_8" property="cash8" jdbcType="REAL" />
+        <result column="cash_9" property="cash9" jdbcType="REAL" />
+        <result column="cash_10" property="cash10" jdbcType="REAL" />
+        <result column="cash_11" property="cash11" jdbcType="REAL" />
+        <result column="cash_12" property="cash12" jdbcType="REAL" />
+        <result column="cash_13" property="cash13" jdbcType="REAL" />
+        <result column="cash_14" property="cash14" jdbcType="REAL" />
+        <result column="cash_15" property="cash15" jdbcType="REAL" />
+        <result column="cash_16" property="cash16" jdbcType="REAL" />
+        <result column="cash_17" property="cash17" jdbcType="REAL" />
+        <result column="cash_18" property="cash18" jdbcType="REAL" />
+        <result column="cash_19" property="cash19" jdbcType="REAL" />
+        <result column="cash_20" property="cash20" jdbcType="REAL" />
+        <result column="cash_21" property="cash21" jdbcType="REAL" />
+        <result column="cash_22" property="cash22" jdbcType="REAL" />
+        <result column="cash_23" property="cash23" jdbcType="REAL" />
+        <result column="cash_24" property="cash24" jdbcType="REAL" />
+        <result column="cash_25" property="cash25" jdbcType="REAL" />
+        <result column="cash_26" property="cash26" jdbcType="REAL" />
+        <result column="cash_27" property="cash27" jdbcType="REAL" />
+        <result column="cash_28" property="cash28" jdbcType="REAL" />
+        <result column="cash_29" property="cash29" jdbcType="REAL" />
+        <result column="cash_30" property="cash30" jdbcType="REAL" />
+        <result column="cash_31" property="cash31" jdbcType="REAL" />
+        <result column="cash_32" property="cash32" jdbcType="REAL" />
+        <result column="cash_33" property="cash33" jdbcType="REAL" />
+        <result column="cash_34" property="cash34" jdbcType="REAL" />
+        <result column="cash_35" property="cash35" jdbcType="REAL" />
+        <result column="cash_36" property="cash36" jdbcType="REAL" />
+        <result column="cash_37" property="cash37" jdbcType="REAL" />
+        <result column="cash_38" property="cash38" jdbcType="REAL" />
+        <result column="cash_39" property="cash39" jdbcType="REAL" />
+        <result column="cash_40" property="cash40" jdbcType="REAL" />
+        <result column="cash_41" property="cash41" jdbcType="REAL" />
+        <result column="cash_42" property="cash42" jdbcType="REAL" />
+        <result column="cash_43" property="cash43" jdbcType="REAL" />
+        <result column="cash_44" property="cash44" jdbcType="REAL" />
+        <result column="cash_45" property="cash45" jdbcType="REAL" />
+        <result column="cash_46" property="cash46" jdbcType="REAL" />
+        <result column="cash_47" property="cash47" jdbcType="REAL" />
+        <result column="cash_48" property="cash48" jdbcType="REAL" />
+        <result column="cash_49" property="cash49" jdbcType="REAL" />
+        <result column="cash_50" property="cash50" jdbcType="REAL" />
+        <result column="cash_51" property="cash51" jdbcType="REAL" />
+        <result column="cash_52" property="cash52" jdbcType="REAL" />
+        <result column="cash_53" property="cash53" jdbcType="REAL" />
+        <result column="cash_54" property="cash54" jdbcType="REAL" />
+        <result column="cash_55" property="cash55" jdbcType="REAL" />
+        <result column="cash_56" property="cash56" jdbcType="REAL" />
+        <result column="cash_57" property="cash57" jdbcType="REAL" />
+        <result column="cash_58" property="cash58" jdbcType="REAL" />
+        <result column="cash_59" property="cash59" jdbcType="REAL" />
+        <result column="cash_60" property="cash60" jdbcType="REAL" />
+        <result column="cash_61" property="cash61" jdbcType="REAL" />
+        <result column="cash_62" property="cash62" jdbcType="REAL" />
+        <result column="cash_63" property="cash63" jdbcType="REAL" />
+        <result column="cash_64" property="cash64" jdbcType="REAL" />
+        <result column="cash_65" property="cash65" jdbcType="REAL" />
+        <result column="cash_66" property="cash66" jdbcType="REAL" />
+        <result column="cash_67" property="cash67" jdbcType="REAL" />
+        <result column="cash_68" property="cash68" jdbcType="REAL" />
+        <result column="cash_69" property="cash69" jdbcType="REAL" />
+        <result column="cash_70" property="cash70" jdbcType="REAL" />
+        <result column="cash_71" property="cash71" jdbcType="REAL" />
+        <result column="cash_72" property="cash72" jdbcType="REAL" />
+        <result column="cash_73" property="cash73" jdbcType="REAL" />
+        <result column="cash_74" property="cash74" jdbcType="REAL" />
+        <result column="cash_75" property="cash75" jdbcType="REAL" />
+        <result column="cash_76" property="cash76" jdbcType="REAL" />
+        <result column="cash_77" property="cash77" jdbcType="REAL" />
+        <result column="cash_78" property="cash78" jdbcType="REAL" />
+        <result column="cash_79" property="cash79" jdbcType="REAL" />
+        <result column="cash_80" property="cash80" jdbcType="REAL" />
+        <result column="cash_81" property="cash81" jdbcType="REAL" />
+        <result column="cash_82" property="cash82" jdbcType="REAL" />
+        <result column="cash_83" property="cash83" jdbcType="REAL" />
+        <result column="cash_84" property="cash84" jdbcType="REAL" />
+        <result column="cash_85" property="cash85" jdbcType="REAL" />
+        <result column="cash_86" property="cash86" jdbcType="REAL" />
+        <result column="cash_87" property="cash87" jdbcType="REAL" />
+        <result column="cash_88" property="cash88" jdbcType="REAL" />
+        <result column="cash_89" property="cash89" jdbcType="REAL" />
+    </resultMap>
+</mapper>

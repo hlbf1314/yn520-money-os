@@ -1,0 +1,76 @@
+server:
+  port: 8082
+  tomcat:
+    uri-encoding: UTF-8
+  max-http-header-size: 80KB
+
+spring:
+  redis:
+    host: 192.168.43.140
+    port: 6379
+    password: 123456
+  profiles:
+    active: dev
+  datasource:
+    income:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://192.168.43.140/finance_report_income?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+      username: root
+      password: 123456
+    balance:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://192.168.43.140/finance_report_balance?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+      username: root
+      password: 123456
+    cash:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://192.168.43.140/finance_report_cash?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+      username: root
+      password: 123456
+    stockinfo:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://192.168.43.140/stock_info?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+      username: root
+      password: 123456
+    teacher:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://192.168.43.140/teacher?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+      username: root
+      password: 123456
+    student:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://192.168.43.140/student?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true
+      username: root
+      password: 123456
+    hikari:
+      connection-timeout: 30000
+      minimum-idle: 5
+      maximum-pool-size: 20
+      auto-commit: true
+      idle-timeout: 600000
+      pool-name: DateSourceHikariCP
+      max-lifetime: 1800000
+      connection-test-query: SELECT 1
+  servlet:
+    multipart:
+      max-file-size: 512000
+      max-request-size: 512000
+
+mybatis:
+  type-aliases-package: com.yn520.money.pojo
+  mapper-locations: classpath:mapper/*.xml
+
+mapper:
+  mappers: com.yn520.money.my.mapper.MyMapper
+  not-empty: false
+  identity: MYSQL
+
+pagehelper:
+  helper-dialect: mysql
+  support-methods-arguments: true

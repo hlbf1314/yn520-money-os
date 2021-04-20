@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yn520.money.mapper.income.IncomeReportMapper">
+    <select id="oneSeason" resultMap="reportResultMap" parameterType="java.lang.String">
+        select * from ${tableName} where report_date=#{rDate}
+    </select>
+
+    <select id="seasons" resultMap="reportResultMap" parameterType="java.lang.String">
+        select * from ${tableName} order by report_date desc LIMIT 0,#{count};
+    </select>
+
+    <select id="seasonAll" resultMap="reportResultMap" parameterType="java.lang.String">
+        select * from ${tableName} order by report_date desc
+    </select>
+
+    <resultMap id="reportResultMap" type="com.yn520.money.pojo.Income000001">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="report_date" property="reportDate" jdbcType="VARCHAR"/>
+        <result column="income_1" property="income1" jdbcType="REAL"/>
+        <result column="income_2" property="income2" jdbcType="REAL"/>
+        <result column="income_3" property="income3" jdbcType="REAL"/>
+        <result column="income_4" property="income4" jdbcType="REAL"/>
+        <result column="income_5" property="income5" jdbcType="REAL"/>
+        <result column="income_6" property="income6" jdbcType="REAL"/>
+        <result column="income_7" property="income7" jdbcType="REAL"/>
+        <result column="income_8" property="income8" jdbcType="REAL"/>
+        <result column="income_9" property="income9" jdbcType="REAL"/>
+        <result column="income_10" property="income10" jdbcType="REAL"/>
+        <result column="income_11" property="income11" jdbcType="REAL"/>
+        <result column="income_12" property="income12" jdbcType="REAL"/>
+        <result column="income_13" property="income13" jdbcType="REAL"/>
+        <result column="income_14" property="income14" jdbcType="REAL"/>
+        <result column="income_15" property="income15" jdbcType="REAL"/>
+        <result column="income_16" property="income16" jdbcType="REAL"/>
+        <result column="income_17" property="income17" jdbcType="REAL"/>
+        <result column="income_18" property="income18" jdbcType="REAL"/>
+        <result column="income_19" property="income19" jdbcType="REAL"/>
+        <result column="income_20" property="income20" jdbcType="REAL"/>
+        <result column="income_21" property="income21" jdbcType="REAL"/>
+        <result column="income_22" property="income22" jdbcType="REAL"/>
+        <result column="income_23" property="income23" jdbcType="REAL"/>
+        <result column="income_24" property="income24" jdbcType="REAL"/>
+        <result column="income_25" property="income25" jdbcType="REAL"/>
+        <result column="income_26" property="income26" jdbcType="REAL"/>
+        <result column="income_27" property="income27" jdbcType="REAL"/>
+        <result column="income_28" property="income28" jdbcType="REAL"/>
+        <result column="income_29" property="income29" jdbcType="REAL"/>
+        <result column="income_30" property="income30" jdbcType="REAL"/>
+        <result column="income_31" property="income31" jdbcType="REAL"/>
+        <result column="income_32" property="income32" jdbcType="REAL"/>
+        <result column="income_33" property="income33" jdbcType="REAL"/>
+        <result column="income_34" property="income34" jdbcType="REAL"/>
+        <result column="income_35" property="income35" jdbcType="REAL"/>
+        <result column="income_36" property="income36" jdbcType="REAL"/>
+        <result column="income_37" property="income37" jdbcType="REAL"/>
+        <result column="income_38" property="income38" jdbcType="REAL"/>
+        <result column="income_39" property="income39" jdbcType="REAL"/>
+        <result column="income_40" property="income40" jdbcType="REAL"/>
+        <result column="income_41" property="income41" jdbcType="REAL"/>
+        <result column="income_42" property="income42" jdbcType="REAL"/>
+        <result column="income_43" property="income43" jdbcType="REAL"/>
+        <result column="income_44" property="income44" jdbcType="REAL"/>
+        <result column="income_45" property="income45" jdbcType="REAL"/>
+    </resultMap>
+</mapper>

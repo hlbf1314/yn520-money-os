@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yn520.money.mapper.balance.BalanceReportMapper">
+    <select id="oneSeason" resultMap="reportResultMap" parameterType="java.lang.String">
+        select * from ${tableName} where report_date=#{rDate}
+    </select>
+
+    <select id="seasons" resultMap="reportResultMap" parameterType="java.lang.String">
+        select * from ${tableName} order by report_date desc LIMIT 0,#{count};
+    </select>
+
+    <select id="seasonAll" resultMap="reportResultMap" parameterType="java.lang.String">
+        select * from ${tableName} order by report_date desc
+    </select>
+
+
+    <resultMap id="reportResultMap" type="com.yn520.money.pojo.Balance000001">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="report_date" property="reportDate" jdbcType="VARCHAR"/>
+        <result column="balance_1" property="balance1" jdbcType="REAL"/>
+        <result column="balance_2" property="balance2" jdbcType="REAL"/>
+        <result column="balance_3" property="balance3" jdbcType="REAL"/>
+        <result column="balance_4" property="balance4" jdbcType="REAL"/>
+        <result column="balance_5" property="balance5" jdbcType="REAL"/>
+        <result column="balance_6" property="balance6" jdbcType="REAL"/>
+        <result column="balance_7" property="balance7" jdbcType="REAL"/>
+        <result column="balance_8" property="balance8" jdbcType="REAL"/>
+        <result column="balance_9" property="balance9" jdbcType="REAL"/>
+        <result column="balance_10" property="balance10" jdbcType="REAL"/>
+        <result column="balance_11" property="balance11" jdbcType="REAL"/>
+        <result column="balance_12" property="balance12" jdbcType="REAL"/>
+        <result column="balance_13" property="balance13" jdbcType="REAL"/>
+        <result column="balance_14" property="balance14" jdbcType="REAL"/>
+        <result column="balance_15" property="balance15" jdbcType="REAL"/>
+        <result column="balance_16" property="balance16" jdbcType="REAL"/>
+        <result column="balance_17" property="balance17" jdbcType="REAL"/>
+        <result column="balance_18" property="balance18" jdbcType="REAL"/>
+        <result column="balance_19" property="balance19" jdbcType="REAL"/>
+        <result column="balance_20" property="balance20" jdbcType="REAL"/>
+        <result column="balance_21" property="balance21" jdbcType="REAL"/>
+        <result column="balance_22" property="balance22" jdbcType="REAL"/>
+        <result column="balance_23" property="balance23" jdbcType="REAL"/>
+        <result column="balance_24" property="balance24" jdbcType="REAL"/>
+        <result column="balance_25" property="balance25" jdbcType="REAL"/>
+        <result column="balance_26" property="balance26" jdbcType="REAL"/>
+        <result column="balance_27" property="balance27" jdbcType="REAL"/>
+        <result column="balance_28" property="balance28" jdbcType="REAL"/>
+        <result column="balance_29" property="balance29" jdbcType="REAL"/>
+        <result column="balance_30" property="balance30" jdbcType="REAL"/>
+        <result column="balance_31" property="balance31" jdbcType="REAL"/>
+        <result column="balance_32" property="balance32" jdbcType="REAL"/>
+        <result column="balance_33" property="balance33" jdbcType="REAL"/>
+        <result column="balance_34" property="balance34" jdbcType="REAL"/>
+        <result column="balance_35" property="balance35" jdbcType="REAL"/>
+        <result column="balance_36" property="balance36" jdbcType="REAL"/>
+        <result column="balance_37" property="balance37" jdbcType="REAL"/>
+        <result column="balance_38" property="balance38" jdbcType="REAL"/>
+        <result column="balance_39" property="balance39" jdbcType="REAL"/>
+        <result column="balance_40" property="balance40" jdbcType="REAL"/>
+        <result column="balance_41" property="balance41" jdbcType="REAL"/>
+        <result column="balance_42" property="balance42" jdbcType="REAL"/>
+        <result column="balance_43" property="balance43" jdbcType="REAL"/>
+        <result column="balance_44" property="balance44" jdbcType="REAL"/>
+        <result column="balance_45" property="balance45" jdbcType="REAL"/>
+        <result column="balance_46" property="balance46" jdbcType="REAL"/>
+        <result column="balance_47" property="balance47" jdbcType="REAL"/>
+        <result column="balance_48" property="balance48" jdbcType="REAL"/>
+        <result column="balance_49" property="balance49" jdbcType="REAL"/>
+        <result column="balance_50" property="balance50" jdbcType="REAL"/>
+        <result column="balance_51" property="balance51" jdbcType="REAL"/>
+        <result column="balance_52" property="balance52" jdbcType="REAL"/>
+        <result column="balance_53" property="balance53" jdbcType="REAL"/>
+        <result column="balance_54" property="balance54" jdbcType="REAL"/>
+        <result column="balance_55" property="balance55" jdbcType="REAL"/>
+        <result column="balance_56" property="balance56" jdbcType="REAL"/>
+        <result column="balance_57" property="balance57" jdbcType="REAL"/>
+        <result column="balance_58" property="balance58" jdbcType="REAL"/>
+        <result column="balance_59" property="balance59" jdbcType="REAL"/>
+        <result column="balance_60" property="balance60" jdbcType="REAL"/>
+        <result column="balance_61" property="balance61" jdbcType="REAL"/>
+        <result column="balance_62" property="balance62" jdbcType="REAL"/>
+        <result column="balance_63" property="balance63" jdbcType="REAL"/>
+        <result column="balance_64" property="balance64" jdbcType="REAL"/>
+        <result column="balance_65" property="balance65" jdbcType="REAL"/>
+        <result column="balance_66" property="balance66" jdbcType="REAL"/>
+        <result column="balance_67" property="balance67" jdbcType="REAL"/>
+        <result column="balance_68" property="balance68" jdbcType="REAL"/>
+        <result column="balance_69" property="balance69" jdbcType="REAL"/>
+        <result column="balance_70" property="balance70" jdbcType="REAL"/>
+        <result column="balance_71" property="balance71" jdbcType="REAL"/>
+        <result column="balance_72" property="balance72" jdbcType="REAL"/>
+        <result column="balance_73" property="balance73" jdbcType="REAL"/>
+        <result column="balance_74" property="balance74" jdbcType="REAL"/>
+        <result column="balance_75" property="balance75" jdbcType="REAL"/>
+        <result column="balance_76" property="balance76" jdbcType="REAL"/>
+        <result column="balance_77" property="balance77" jdbcType="REAL"/>
+        <result column="balance_78" property="balance78" jdbcType="REAL"/>
+        <result column="balance_79" property="balance79" jdbcType="REAL"/>
+        <result column="balance_80" property="balance80" jdbcType="REAL"/>
+        <result column="balance_81" property="balance81" jdbcType="REAL"/>
+        <result column="balance_82" property="balance82" jdbcType="REAL"/>
+        <result column="balance_83" property="balance83" jdbcType="REAL"/>
+        <result column="balance_84" property="balance84" jdbcType="REAL"/>
+        <result column="balance_85" property="balance85" jdbcType="REAL"/>
+        <result column="balance_86" property="balance86" jdbcType="REAL"/>
+        <result column="balance_87" property="balance87" jdbcType="REAL"/>
+        <result column="balance_88" property="balance88" jdbcType="REAL"/>
+        <result column="balance_89" property="balance89" jdbcType="REAL"/>
+        <result column="balance_90" property="balance90" jdbcType="REAL"/>
+        <result column="balance_91" property="balance91" jdbcType="REAL"/>
+        <result column="balance_92" property="balance92" jdbcType="REAL"/>
+        <result column="balance_93" property="balance93" jdbcType="REAL"/>
+        <result column="balance_94" property="balance94" jdbcType="REAL"/>
+        <result column="balance_95" property="balance95" jdbcType="REAL"/>
+        <result column="balance_96" property="balance96" jdbcType="REAL"/>
+        <result column="balance_97" property="balance97" jdbcType="REAL"/>
+        <result column="balance_98" property="balance98" jdbcType="REAL"/>
+        <result column="balance_99" property="balance99" jdbcType="REAL"/>
+        <result column="balance_100" property="balance100" jdbcType="REAL"/>
+        <result column="balance_101" property="balance101" jdbcType="REAL"/>
+        <result column="balance_102" property="balance102" jdbcType="REAL"/>
+        <result column="balance_103" property="balance103" jdbcType="REAL"/>
+        <result column="balance_104" property="balance104" jdbcType="REAL"/>
+        <result column="balance_105" property="balance105" jdbcType="REAL"/>
+        <result column="balance_106" property="balance106" jdbcType="REAL"/>
+        <result column="balance_107" property="balance107" jdbcType="REAL"/>
+        <result column="balance_108" property="balance108" jdbcType="REAL"/>
+    </resultMap>
+</mapper>
