@@ -4,3 +4,7 @@
 /money-server/money-mapper/target/
 /money-server/money-common/target/
 /money-server/money-api/target/
+/money-scripts/jsons
+/money-scripts/income_statements
+/money-scripts/cash_statement
+/money-scripts/balance_sheet
