@@ -1,0 +1,66 @@
+.reportMain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1%;
+
+  .reportGetter {
+    max-width: 98%;
+    width: 395px;
+    display: flex;
+    flex-direction: column;
+
+    .searchBtn {
+      width: 100%;
+      margin: 5px 4px 0px auto;
+    }
+  }
+
+  .tableContainer {
+    max-width: 98%;
+    margin: 5px;
+  }
+}
+
+.pkPreview {
+  position: absolute;
+  left: auto;
+  right: 0px;
+  top: 50%;
+  user-select: none;
+  cursor: pointer;
+
+  .pkArrow {
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+  }
+}
+
+.pkPreviewDrawer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: transparent;
+
+  &:hover {
+    background: lightgrey;
+  }
+
+  .closeOutlined {
+    margin: 0 0 0 auto;
+  }
+}
+
+.reportChart {
+  .emptyTips {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+  }
+}
