@@ -28,11 +28,8 @@ public class GeneratorDisplay {
     private static void moneyGenerator() throws Exception {
         GeneratorDisplay generatorSqlmap = new GeneratorDisplay();
         generatorSqlmap.generator("generator-money/incomeGeneratorConfig.xml");
-//			generatorSqlmap = new GeneratorDisplay();
         generatorSqlmap.generator("generator-money/balanceGeneratorConfig.xml");
-//			generatorSqlmap = new GeneratorDisplay();
         generatorSqlmap.generator("generator-money/cashGeneratorConfig.xml");
-//			generatorSqlmap = new GeneratorDisplay();
         generatorSqlmap.generator("generator-money/stockInfoGeneratorConfig.xml");
     }
 
