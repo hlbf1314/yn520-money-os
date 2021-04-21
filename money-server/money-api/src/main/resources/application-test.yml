@@ -9,6 +9,12 @@ spring:
     host: 192.168.43.140
     port: 6379
     password: 123456
+    lettuce:
+      pool:
+        min-idle: 10
+        max-idle: 30
+        max-active: 30
+        max-wait: 20000
   profiles:
     active: dev
   datasource:
