@@ -78,10 +78,10 @@ class PKPreview extends React.PureComponent<any, PKPreviewState> {
   }
 
   private doGotoPkPage (): void {
-    passportStore.setShowLogin(true)
+    // passportStore.setShowLogin(true)
     // passportStore.setShowRegister(true)
     console.log('showLogin ', passportStore.showLogin)
-    // this.props.history.push("/pk");
+    this.props.history.push("/pk");
   }
 
   private preview (): React.ReactNode {
